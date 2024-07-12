@@ -67,3 +67,4 @@ be used as a model for a production ready application.
 * [material-ui](http://www.material-ui.com/#/)
 * [babel](https://babeljs.io/)
 * [eslint](http://eslint.org/)
+ 

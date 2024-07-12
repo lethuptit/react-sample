@@ -13,7 +13,7 @@ var entries = [
 var loaders = [
     {
         test: /\.scss$/,
-        use: ['style', 'css?modules', 'sass'],
+        loader: 'style!css?modules!sass',
         include: path.join(__dirname, APP_ROOT)
     },
     {
@@ -40,10 +40,10 @@ module.exports = {
       },
       plugins: plugins,
       module: {
-        rules: loaders
+        loaders: loaders
       },
       devServer: {
-        static: path.join(__dirname, '/dist/'),
-	    hot: true
+		      contentBase: './dist',
+		      hot: true
       }
 };

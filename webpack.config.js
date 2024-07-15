@@ -13,7 +13,7 @@ var entries = [
 var loaders = [
     {
         test: /\.scss$/,
-        use: ['style', 'css?modules', 'sass'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.join(__dirname, APP_ROOT)
     },
     {
@@ -33,6 +33,7 @@ var plugins = [
 
 module.exports = {
        devtool: 'source-map',
+       mode: 'development',
        entry: entries,
        output: {
       		path: path.join(__dirname, 'dist'),

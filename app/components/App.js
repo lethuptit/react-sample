@@ -1,8 +1,10 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+//import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { createTheme } from '@material-ui/core/styles'
 import IconButton from 'material-ui/IconButton';
-import StarIcon from 'material-ui/svg-icons/toggle/star';
+//import StarIcon from 'material-ui/svg-icons/toggle/star';
+import StarIcon from '@material-ui/core/SvgIcon';
 
 import Viewport from './Viewport';
 
@@ -18,7 +20,7 @@ class App extends React.Component {
 
     getChildContext(){
       return {
-        muiTheme: getMuiTheme()
+        muiTheme: createTheme()
       };
     }
 
